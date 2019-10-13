@@ -1,19 +1,20 @@
 import styled, { css } from 'styled-components';
 
 const Button = styled.button`
-    background-color: #ffd82b;
-    border-radius: 30px;
+    padding: 0;
+    background-color: ${({ theme, color }) => color || theme.notes};
+    border-radius: 50px;
     border: none;
     width: ${({ width }) => width || '220px'};
     height: 47px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: ${({ theme }) => theme.bold};
     font-size: 16px;
 
     ${({ secondary }) => (
         secondary && css`
-            background-color: #e6e6e6;
+            background-color: ${({ theme }) => theme.grey200};
             width: 105px;
             height: 30px;
             font-size: 10px;
