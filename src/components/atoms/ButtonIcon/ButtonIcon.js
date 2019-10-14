@@ -12,9 +12,14 @@ const ButtonIcon = styled.button`
   border: none;
   background-color: ${({ active }) => active ? 'white' : 'transparent'};
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.active {
     background-color: white;
   }
+
 `;
 
 export default ButtonIcon;

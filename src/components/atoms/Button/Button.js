@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const Button = styled.button`
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: black;
     padding: 0;
-    background-color: ${({ theme, color }) => color || theme.notes};
+    background-color: ${({ activecolor, theme }) => theme[activecolor]};
     border-radius: 50px;
     border: none;
     width: ${({ width }) => width || '220px'};
@@ -21,6 +25,10 @@ const Button = styled.button`
             letter-spacing: 1px;
         `
     )}
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export default Button;
